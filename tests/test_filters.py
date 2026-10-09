@@ -1,4 +1,4 @@
-from filters import apply_filters
+from job_scanner.filters import apply_filters
 
 
 def test_filter_salary():

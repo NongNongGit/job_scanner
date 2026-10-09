@@ -1,7 +1,8 @@
 def build_html(jobs):
     rows = []
     for job in jobs:
-        rows.append(f"""
+        rows.append(
+            f"""
         <tr>
           <td>{job.get('title', '')}</td>
           <td>{job.get('company', '')}</td>
@@ -10,7 +11,8 @@ def build_html(jobs):
           <td>{job.get('score', '')}</td>
           <td><a href="{job.get('url', '')}" target="_blank">View</a></td>
         </tr>
-        """)
+        """
+        )
 
     rows_html = "\n".join(rows)
 

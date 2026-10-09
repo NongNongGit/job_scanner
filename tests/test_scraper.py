@@ -1,12 +1,12 @@
-import linkedin_scraper
+from job_scanner.linkedin_scraper import fetch_linkedin_jobs, normalize
 
 
 def test_normalize_list():
-    assert linkedin_scraper.normalize(["A", "B"]) == "A, B"
+    assert normalize(["A", "B"]) == "A, B"
 
 
 def test_normalize_none():
-    assert linkedin_scraper.normalize(None) == ""
+    assert normalize(None) == ""
 
 
 def test_scraper_normalization(monkeypatch):
@@ -39,7 +39,7 @@ def test_scraper_normalization(monkeypatch):
         }
     }
 
-    jobs = linkedin_scraper.fetch_linkedin_jobs(profile)
+    jobs = fetch_linkedin_jobs(profile)
 
     assert len(jobs) == 1
     job = jobs[0]

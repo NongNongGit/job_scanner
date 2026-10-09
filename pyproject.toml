@@ -1,0 +1,9 @@
+[project]
+name = "job_scanner"
+version = "0.1.0"
+description = "Automated LinkedIn job scanner"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = "job_scanner"
+

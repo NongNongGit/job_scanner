@@ -1,7 +1,8 @@
 import os
+
+from report import build_html
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-from report import build_html
 
 
 def send_email(jobs, base_config):

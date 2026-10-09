@@ -1,12 +1,13 @@
 import json
 import os
+
 from dotenv import load_dotenv
 
-from linkedin_scraper import fetch_linkedin_jobs
-from filters import apply_filters
-from job_history import filter_new_jobs
-from email_sender import send_email, send_summary
-from scoring import score_job
+from job_scanner.email_sender import send_email, send_summary
+from job_scanner.filters import apply_filters
+from job_scanner.job_history import filter_new_jobs
+from job_scanner.linkedin_scraper import fetch_linkedin_jobs
+from job_scanner.scoring import score_job
 
 load_dotenv()
 

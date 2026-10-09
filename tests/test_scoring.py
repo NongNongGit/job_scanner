@@ -1,4 +1,4 @@
-from scoring import score_job
+from job_scanner.scoring import score_job
 
 
 def test_score_job():
